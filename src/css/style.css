@@ -28,11 +28,11 @@
   --gutter: 0.25em;
 }
 
-@media screen and (min-width: 23.475em) {
+/* @media screen and (min-width: 23.475em) {
   :root {
     --padding-400: 3em;
   }
-}
+} */
 
 html {
   scroll-behavior: smooth;
@@ -99,7 +99,7 @@ input {
 
 /* padding */
 .padding {
-  padding: var(--padiing-400);
+  padding: var(--padding-400);
 }
 .padding--vertical {
   padding-top: var(--padding-400);
@@ -116,6 +116,21 @@ input {
 }
 .flex--column {
   flex-direction: column;
+}
+
+/* grid */
+.grid {
+  display: grid;
+}
+
+.grid__gap--400 {
+  gap: 1em;
+}
+.grid__gap--700 {
+  gap: 2em;
+}
+.grid__gap--900 {
+  gap: 3em;
 }
 /* align */
 .justify-center {
@@ -140,12 +155,13 @@ input {
   background-color: var(--clr-white-900);
 }
 
-.cards--rounded-edges {
+.cards--rounded-edges,
+.card-tip--rounded-edges {
   border-radius: 2em;
 }
 
 /* card styling */
-
+/* first card */
 .card {
   display: grid;
   gap: 2em;
@@ -156,6 +172,12 @@ input {
   grid-template-columns: 1fr 1fr;
   gap: 1em;
   /* grid-gap: var(--gutter); */
+}
+
+/* second card */
+.card-tip {
+  background-color: var(--clr-neutral-900);
+  padding: var(--padding-400) calc(var(--padding-400) / 2);
 }
 
 /* * */
