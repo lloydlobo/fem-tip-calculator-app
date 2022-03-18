@@ -39,6 +39,12 @@ body {
   background-color: var(--clr-neutral-400);
 }
 
+header {
+  grid-area: header;
+}
+main {
+  grid-area: main;
+}
 *,
 *::before,
 *::after {
@@ -97,6 +103,6 @@ input {
 /* * */
 
 footer {
-  margin-top: auto;
+  grid-area: footer;
   font-size: var(--fs-300);
 }
