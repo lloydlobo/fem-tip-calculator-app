@@ -144,6 +144,13 @@ input {
   border-radius: 2em;
 }
 
+/* card styling */
+
+.card {
+  display: grid;
+  gap: 2em;
+}
+
 .card__tip__percent {
   display: grid;
   grid-template-columns: 1fr 1fr;
