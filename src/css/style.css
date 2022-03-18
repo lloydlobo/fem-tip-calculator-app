@@ -1,0 +1,66 @@
+:root {
+  --ff-sans-normal: Helvetica, Arial, sans-serif;
+  /* colors */
+  --clr-primary: hsl(172, 67%, 45%);
+  /* color neutral */
+  --clr-neutral-900: hsl(183, 100%, 15%);
+  --clr-neutral-800: hsl(186, 14%, 43%);
+  --clr-neutral-700: hsl(184, 14%, 56%);
+  --clr-neutral-400: hsl(185, 41%, 84%);
+  --clr-neutral-300: hsl(189, 41%, 97%);
+  --clr-white-900: hsl(0, 0%, 100%);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-height: 100vh;
+  font-family: var(--ff-sans-normal);
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: var(--clr-neutral-400);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ! css box model checker */
+/* todo delete while publishing */
+
+* {
+  border: 1px solid hsl(62, 62%, 62%);
+}
+
+/* utility classes */
+
+.container {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1.5em;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* * */
+/* * navigation */
+/* * */
+
+/* logo */
