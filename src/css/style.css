@@ -136,12 +136,26 @@ input {
 /* * cards form */
 /* * */
 
-.card {
+.cards {
   background-color: var(--clr-white-900);
 }
 
-.card--rounded-top {
-  border-radius: 2em 2em 0 0;
+.cards--rounded-edges {
+  border-radius: 2em;
+}
+
+/* card styling */
+
+.card {
+  display: grid;
+  gap: 2em;
+}
+
+.card__tip__percent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  /* grid-gap: var(--gutter); */
 }
 
 /* * */
