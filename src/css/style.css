@@ -140,8 +140,8 @@ input {
   background-color: var(--clr-white-900);
 }
 
-.card--rounded-top {
-  border-radius: 2em 2em 0 0;
+.card--rounded-edges {
+  border-radius: 2em;
 }
 
 .card__tip__percent {
