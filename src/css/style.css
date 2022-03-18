@@ -133,6 +133,18 @@ input {
 /* logo */
 
 /* * */
+/* * cards form */
+/* * */
+
+.card {
+  background-color: var(--clr-white-900);
+}
+
+.card--rounded-top {
+  border-radius: 2em 2em 0 0;
+}
+
+/* * */
 /* * footer */
 /* * */
 
