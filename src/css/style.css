@@ -204,6 +204,15 @@ input {
   font-weight: bold;
   font-family: inherit;
 }
+.card-tip__total__value img,
+.card-tip__amount__value img {
+  max-width: var(--fs-400);
+  /* width: 100%; */
+  min-height: clamp(0.5em, 1em + 5vw, (var(--fs-400) / 1.618));
+  height: auto;
+  /* object-fit: fit-content; */
+  /* transform: scale(2); */
+}
 /* * */
 /* * footer */
 /* * */
