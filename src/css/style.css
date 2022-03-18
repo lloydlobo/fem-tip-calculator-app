@@ -15,10 +15,20 @@ html {
 }
 body {
   min-height: 100vh;
-  font-family: var(--ff-sans-normal);
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+
   overflow: hidden;
+
   padding: 0;
   margin: 0;
+
+  font-family: var(--ff-sans-normal);
   background-color: var(--clr-neutral-400);
 }
 
@@ -64,3 +74,11 @@ body {
 /* * */
 
 /* logo */
+
+/* * */
+/* * footer */
+/* * */
+
+footer {
+  margin-top: auto;
+}
