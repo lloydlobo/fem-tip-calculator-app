@@ -47,7 +47,7 @@ body {
   grid-template-columns: auto;
   grid-template-rows: auto 1fr auto;
 
-  overflow: hidden;
+  overflow-x: hidden;
 
   padding: 0;
   margin: 0;
@@ -180,6 +180,11 @@ input {
   padding: var(--padding-400) calc(var(--padding-400) / 2);
 }
 
+/* align calculated amout to the edge */
+.card-tip__amount__label,
+.card-tip__total__label {
+  flex: 1;
+}
 .card-tip__amount__label__heading,
 .card-tip__total__label__heading {
   color: var(--clr-white-900);
