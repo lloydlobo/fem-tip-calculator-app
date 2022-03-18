@@ -34,7 +34,68 @@
       </nav>
     </header>
     <main>
-      <section></section>
+      <section>
+        <div class="cards container">
+          <div class="card">
+            <div class="card__bill">
+              <label class="card__bill__label" for="amount">Bill</label>
+              <input type="integer" placeholder="0" class="card__bill__input" />
+            </div>
+            <div class="card__tip">
+              <label for="tip" class="card__tip__label">Select tip %</label>
+              <div class="card__tip__percent">
+                <input
+                  type="button"
+                  class="card__tip__percent__item"
+                  value="5%"
+                />
+                <input
+                  type="button"
+                  class="card__tip__percent__item"
+                  value="10%"
+                />
+                <input
+                  type="button"
+                  class="card__tip__percent__item"
+                  value="15%"
+                />
+                <input
+                  type="button"
+                  class="card__tip__percent__item"
+                  value="25%"
+                />
+                <input
+                  type="button"
+                  class="card__tip__percent__item"
+                  value="50%"
+                />
+
+                <input
+                  type="number"
+                  placeholder="Custom"
+                  min="0"
+                  step="1"
+                  max="100"
+                  class="card__tip__percent__item__input"
+                />
+              </div>
+            </div>
+            <form class="card__people">
+              <label class="card__people__label" for="number"
+                >Number of People</label
+              >
+              <input
+                type="number"
+                placeholder="1"
+                min="1"
+                step="1"
+                class="card__bill__input"
+              />
+            </form>
+            <div class="card"></div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
       <div class="footer container">
