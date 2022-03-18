@@ -140,7 +140,7 @@ input {
   background-color: var(--clr-white-900);
 }
 
-.card--rounded-edges {
+.cards--rounded-edges {
   border-radius: 2em;
 }
 
