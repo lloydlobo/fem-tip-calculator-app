@@ -180,6 +180,16 @@ input {
   padding: var(--padding-400) calc(var(--padding-400) / 2);
 }
 
+.card-tip__amount__label__heading,
+.card-tip__total__label__heading {
+  color: var(--clr-white-900);
+}
+.card-tip__amount__label__subtitle,
+.card-tip__total__label__subtitle {
+  color: var(--clr-neutral-700);
+  font-size: var(--fs-300);
+}
+
 /* * */
 /* * footer */
 /* * */
