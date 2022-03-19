@@ -170,6 +170,14 @@ input {
   gap: 2em;
 }
 
+/* media query for size greater than mobile */
+
+@media screen and (min-width: 24em){
+  .card {
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+}
 .card__tip__percent {
   display: grid;
   grid-template-columns: 1fr 1fr;
