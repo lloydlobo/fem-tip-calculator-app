@@ -122,6 +122,7 @@ input {
 .grid__gap--900 {
   gap: 3em;
 }
+
 /* align */
 .justify-center {
   justify-content: center;
