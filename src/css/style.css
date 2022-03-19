@@ -65,6 +65,13 @@ body {
     grid-template-rows: 0.5fr 1fr auto;
   }
 }
+
+/* @media (hover: hover) {
+    body {
+        color: rebeccapurple;
+    }
+} */
+
 header {
   grid-area: header;
 }
