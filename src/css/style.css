@@ -435,15 +435,14 @@ input {
   display: inline-block;
   vertical-align: baseline;
   max-width: fit-content;
-  /* min-height: clamp(0.5em, 1em + 5vw, (var(--fs-400) / 1.618)); */
-  /* fill: var(--clr-primary); */
-  /* color: var(--clr-primary); */
-  /* background-color: var(--clr-primary); */
   height: auto;
-  /* object-fit: fit-content; */
-  /* transform: scale(2); */
+  object-fit: fit-content;
   /* mix-blend-mode: color-dodge; */
   mix-blend-mode: overlay;
+  transform: scale(1.6); /* transform-origin: 10px 14px; */
+  position: relative;
+  right: 7px;
+  top: -4px;
 }
 
 /* button */
