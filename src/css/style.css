@@ -91,7 +91,7 @@ input {
 /* * utility classes */
 
 .container {
-  max-width: 75em;
+  max-width: 52em;
   margin: 0 auto;
   padding: 0 1.5em;
 }
@@ -172,11 +172,11 @@ input {
 
 /* media query for size greater than mobile */
 
-@media screen and (min-width: 24em){
-  .card {
-display: grid;
-grid-template-columns: 1fr 1fr;
-}
+@media screen and (min-width: 40em) {
+  .cards.cards--rounded-edges.container.grid.grid__gap--700.padding--vertical {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 .card__tip__percent {
   display: grid;
