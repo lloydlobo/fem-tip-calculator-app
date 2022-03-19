@@ -20,7 +20,7 @@
       href="./assets/images/favicon-32x32.png"
     />
   </head>
-  <body>
+  <body class="align-center">
     <header>
       <nav class="main-nav container padding--vertical" aria-label="Main">
         <div class="main-nav__logo flex justify-center align-center">
@@ -35,7 +35,9 @@
     </header>
     <main>
       <section>
-        <div class="cards cards--rounded-edges container padding--vertical">
+        <div
+          class="cards cards--rounded-edges container grid grid__gap--700 padding--vertical"
+        >
           <div class="card">
             <div class="card__bill">
               <label class="card__bill__label" for="amount">Bill</label>
@@ -92,7 +94,27 @@
                 class="card__bill__input"
               />
             </form>
-            <div class="card"></div>
+          </div>
+          <div class="card-tip grid grid__gap--700 card-tip--rounded-edges">
+            <div class="card-tip__amount flex">
+              <div class="card-tip__amount__label flex flex--column">
+                <div class="card-tip__amount__label__heading">Tip Amount</div>
+                <div class="card-tip__amount__label__subtitle">/ person</div>
+              </div>
+              <div class="card-tip__amount__value">
+                <img src="./assets/images/icon-dollar.svg" />4.27
+              </div>
+            </div>
+            <div class="card-tip__total flex">
+              <div class="card-tip__total__label flex flex--column">
+                <div class="card-tip__total__label__heading">Total</div>
+                <div class="card-tip__total__label__subtitle">/ person</div>
+              </div>
+              <div class="card-tip__total__value">
+                <img src="./assets/images/icon-dollar.svg" />32.79
+              </div>
+            </div>
+            <button class="card-tip__button">Reset</button>
           </div>
         </div>
       </section>
@@ -111,32 +133,3 @@
     </footer>
   </body>
 </html>
-
-<!--
-
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-
- -->
-
-<!--
-   io?ref=challenge
-  -->
