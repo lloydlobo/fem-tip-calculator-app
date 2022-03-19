@@ -38,6 +38,7 @@
 } */
 
 html {
+  line-height: normal;
   scroll-behavior: smooth;
 }
 body {
@@ -101,9 +102,9 @@ links:
   - https://drafts.csswg.org/css-inline-3/#line-sizing-property
 category: global
 */
-html {
+/* html {
   line-height: normal;
-}
+} */
 
 /* @docs
 label: Body Margins
@@ -111,9 +112,9 @@ note: |
   Remove the tiny space around the edge of the page.
 category: global
 */
-body {
+/* body {
   margin: 0;
-}
+} */
 
 /* @docs
 label: Hidden Attribute
