@@ -20,9 +20,9 @@
       href="./assets/images/favicon-32x32.png"
     />
   </head>
-  <body class="align-center">
-    <header>
-      <nav class="main-nav container padding--vertical" aria-label="Main">
+  <body>
+    <header class="grid">
+      <nav class="main-nav container grid" aria-label="Main">
         <div class="main-nav__logo flex justify-center align-center">
           <a href="#"
             ><img
@@ -35,15 +35,13 @@
     </header>
     <main>
       <section>
-        <div
-          class="cards cards--rounded-edges container grid grid__gap--700 padding--vertical"
-        >
+        <div class="cards cards--rounded-edges container grid grid__gap--700">
           <div class="card">
-            <div class="card__bill">
+            <div class="card__bill grid">
               <label class="card__bill__label" for="amount">Bill</label>
               <input type="integer" placeholder="0" class="card__bill__input" />
             </div>
-            <div class="card__tip">
+            <div class="card__tip grid">
               <label for="tip" class="card__tip__label">Select tip %</label>
               <div class="card__tip__percent">
                 <input
@@ -82,7 +80,7 @@
                 />
               </div>
             </div>
-            <form class="card__people">
+            <form class="card__people grid">
               <label class="card__people__label" for="number"
                 >Number of People</label
               >
