@@ -119,7 +119,7 @@ category: global
 /* @docs
 label: Hidden Attribute
 note: |
-  Maintain `hidden` behaviour when overriding `display` values.
+  Maintain `hidden` behavior when overriding `display` values.
   category: global
 */
 [hidden] {
@@ -410,7 +410,7 @@ input {
   padding: var(--padding-400) calc(var(--padding-400) / 2);
 }
 
-/* align calculated amout to the edge */
+/* align calculated amount to the edge */
 .card-tip__amount__label,
 .card-tip__total__label {
   flex: 1;
