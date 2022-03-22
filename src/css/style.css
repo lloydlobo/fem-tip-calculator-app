@@ -318,7 +318,7 @@ input {
   font-weight: bold;
   border: 1px solid var(--clr-neutral-300);
   background-color: var(--clr-neutral-300);
-  box-shadow: 0 0 2.1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0.6px var(--clr-neutral-400);
   border-radius: var(--gutter);
   padding: var(--gutter);
 }
