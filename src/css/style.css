@@ -437,6 +437,12 @@ label.card__people__label {
   gap: 1em;
   /* grid-gap: var(--gutter); */
 }
+button.card__tip__percent__item:focus-within {
+  background-color: var(--clr-primary);
+  color: var(--clr-neutral-900);
+  border: var(--clr-neutral-900);
+  font-weight: bold;
+}
 
 /* second card */
 .card-tip {
