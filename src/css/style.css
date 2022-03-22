@@ -301,6 +301,7 @@ button.card__tip__percent__item {
   color: var(--clr-white-900);
   border-radius: var(--gutter);
   border: var(--clr-neutral-900) solid;
+  cursor: pointer;
 }
 
 .card__tip__percent__item button::selection {
@@ -482,6 +483,13 @@ button.card-tip__button {
   border-radius: var(--gutter);
   border: 0;
   font-weight: bold;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 40em) {
+  button.card-tip__button {
+    padding: 0;
+  }
 }
 
 /* * */
