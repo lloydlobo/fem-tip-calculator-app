@@ -316,7 +316,7 @@ input {
   font-size: var(--fs-600);
   text-align: right;
   font-weight: bold;
-  border: 1px solid var(--clr-neutral-300);
+  border: 1px solid var(--clr-ne utral-300);
   background-color: var(--clr-neutral-300);
   box-shadow: 0 0 0.6px var(--clr-neutral-400);
   border-radius: var(--gutter);
