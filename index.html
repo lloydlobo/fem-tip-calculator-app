@@ -1,150 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Frontend Mentor | Tip calculator app</title>
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <script src="./src/js/script.js" defer></script>
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
-  </head>
-  <body>
-    <header class="grid">
-      <nav class="main-nav container grid" aria-label="Main">
-        <div class="main-nav__logo flex justify-center align-center">
-          <a href="#"
-            ><img
-              alt="splitter"
-              src="./assets/images/logo.svg"
-              class="main-nav__logo__image"
-          /></a>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div class="cards cards--rounded-edges container grid grid__gap--700">
-          <div class="card">
-            <div class="card__bill grid">
-              <label class="card__bill__label" for="amount">Bill</label>
-              <input type="integer" placeholder="0" class="card__bill__input" />
-            </div>
-            <div class="card__tip grid">
-              <label for="tip" class="card__tip__label">Select tip %</label>
-              <div class="card__tip__percent">
-                <button
-                  type="button"
-                  class="card__tip__percent__item"
-                  value="5%"
-                >
-                  5%
-                </button>
-                <button
-                  type="button"
-                  class="card__tip__percent__item"
-                  value="10%"
-                >
-                  10%
-                </button>
-                <button
-                  type="button"
-                  class="card__tip__percent__item"
-                  value="15%"
-                >
-                  15%
-                </button>
-                <button
-                  type="button"
-                  class="card__tip__percent__item"
-                  value="25%"
-                >
-                  25%
-                </button>
-                <button
-                  type="button"
-                  class="card__tip__percent__item"
-                  value="50%"
-                >
-                  50%
-                </button>
 
-                <input
-                  type="number"
-                  placeholder="Custom"
-                  min="0"
-                  step="1"
-                  max="100"
-                  class="card__tip__percent__item__input"
-                />
-              </div>
-            </div>
-            <form class="card__people grid">
-              <label class="card__people__label" for="number"
-                >Number of People</label
-              >
-              <input
-                type="number"
-                placeholder="1"
-                min="1"
-                step="1"
-                class="card__bill__input"
-              />
-            </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <script src="./src/js/script.js" defer></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+</head>
+
+<body>
+  <header class="grid">
+    <nav class="main-nav container grid" aria-label="Main">
+      <div class="main-nav__logo flex justify-center align-center">
+        <a href="#"><img alt="splitter" src="./assets/images/logo.svg" class="main-nav__logo__image" /></a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="cards cards--rounded-edges container grid grid__gap--700">
+        <div class="card">
+          <div class="card__bill grid">
+            <label class="card__bill__label" for="amount">Bill</label>
+            <input id="inputBill" required="required" type="integer" placeholder="0" class="card__bill__input" />
           </div>
-          <div class="card-tip grid grid__gap--700 card-tip--rounded-edges">
-            <div class="card-tip__amount flex">
-              <div class="card-tip__amount__label flex flex--column">
-                <div class="card-tip__amount__label__heading">Tip Amount</div>
-                <div class="card-tip__amount__label__subtitle">/ person</div>
-              </div>
-              <div class="card-tip__amount__value">
-                <img src="./assets/images/icon-dollar.svg" />4.27
-              </div>
+          <div class="card__tip grid">
+            <label for="tip" class="card__tip__label">Select tip %</label>
+            <div class="card__tip__percent">
+              <button id="btnsTip" type="button" class="card__tip__percent__item" value="5%">
+                5%
+              </button>
+              <button id="btnsTip" type="button" class="card__tip__percent__item" value="10%">
+                10%
+              </button>
+              <button id="btnsTip" type="button" class="card__tip__percent__item" value="15%">
+                15%
+              </button>
+              <button id="btnsTip" type="button" class="card__tip__percent__item" value="25%">
+                25%
+              </button>
+              <button id="btnsTip" type="button" class="card__tip__percent__item" value="50%">
+                50%
+              </button>
+
+              <input id="inputCustomTip" type="number" placeholder="Custom" min="0" step="1" max="100"
+                class="card__tip__percent__item__input" />
             </div>
-            <div class="card-tip__total flex">
-              <div class="card-tip__total__label flex flex--column">
-                <div class="card-tip__total__label__heading">Total</div>
-                <div class="card-tip__total__label__subtitle">/ person</div>
-              </div>
-              <div class="card-tip__total__value">
-                <img src="./assets/images/icon-dollar.svg" />32.79
-              </div>
-            </div>
-            <button
-              class="card-tip__button"
-              accesskey="r"
-              label="Press r to reset"
-              accesskey-icon="arrow_back"
-            >
-              Reset
-            </button>
           </div>
+          <!-- <form type="submit" class="card__people grid"> -->
+          <div class="card__people">
+            <label class="card__people__label" for="number">Number of People</label>
+            <input id="inputStepTotalPeople" type="number" placeholder="1" min="1" step="1" class="card__bill__input" />
+          </div>
+          <!-- </form> -->
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer container">
-        <div class="footer__attribution">
-          Challenge by
-          <a href="https://frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by
-          <a href="https://github.com/lloydlobo/" target="_blank">Lloyd Lobo</a
-          >.
+        <div class="card-tip grid grid__gap--700 card-tip--rounded-edges">
+          <div class="card-tip__amount flex">
+            <div class="card-tip__amount__label flex flex--column">
+              <div class="card-tip__amount__label__heading">Tip Amount</div>
+              <div class="card-tip__amount__label__subtitle">/ person</div>
+            </div>
+            <div class="card-tip__amount__value">
+              <img src="./assets/images/icon-dollar.svg" />4.27
+            </div>
+          </div>
+          <div class="card-tip__total flex">
+            <div class="card-tip__total__label flex flex--column">
+              <div class="card-tip__total__label__heading">Total</div>
+              <div class="card-tip__total__label__subtitle">/ person</div>
+            </div>
+            <div class="card-tip__total__value">
+              <img src="./assets/images/icon-dollar.svg" />32.79
+            </div>
+          </div>
+          <button class="card-tip__button" accesskey="r" label="Press r to reset" accesskey-icon="arrow_back">
+            Reset
+          </button>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+  <footer>
+    <div class="footer container">
+      <div class="footer__attribution">
+        Challenge by
+        <a href="https://frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://github.com/lloydlobo/" target="_blank">Lloyd Lobo</a>.
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>

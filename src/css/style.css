@@ -416,6 +416,10 @@ input::placeholder {
   gap: 2em;
 }
 
+.card__people {
+  display: grid;
+}
+
 /* media query for size greater than mobile */
 
 @media screen and (min-width: 40em) {
@@ -430,6 +434,25 @@ label.card__people__label {
   color: var(--clr-neutral-800);
   font-weight: bold;
   margin-bottom: var(--fs-300);
+}
+
+/* inputs */
+/***********
+***********
+***********/
+
+input .card__bill_input {
+  position: relative;
+}
+
+input .card__bill_input:hover {
+  border: 1px inset solid var(--clr-neutral-400);
+}
+
+.card__bill_input:required {
+  /* border: 1px inset solid var(--clr-neutral-400); */
+  border: 1px dashed red;
+  /* background-color: var(--clr-neutral-900); */
 }
 
 .card__tip__percent {
