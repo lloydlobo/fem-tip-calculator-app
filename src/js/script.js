@@ -7,20 +7,20 @@ let userTipChoice = 0;
 let userTipCustomChoice = 0;
 let userTotalPeopleInput = 0;
 
-function getInputBillAmount(bill) {
-  const userInputTotalBill = bill;
+async function getInputBillAmount(bill) {
+  const userInputTotalBill = await bill;
   return parseInt(userInputTotalBill, 10);
 }
-function getInputTipPercent(userTipChoice) {
-  const userInputTipPercent = userTipChoice;
+async function getInputTipPercent(userTipChoice) {
+  const userInputTipPercent = await userTipChoice;
   return parseInt(userInputTipPercent, 10);
 }
-function getInputCustomTip(userTipCustomChoice) {
-  const userInputCustomTip = userTipCustomChoice;
+async function getInputCustomTip(userTipCustomChoice) {
+  const userInputCustomTip = await userTipCustomChoice;
   return parseInt(userInputCustomTip, 10);
 }
-function getInputTotalPeople(userTotalPeopleInput) {
-  const userInputTotalPeople = userTotalPeopleInput;
+async function getInputTotalPeople(userTotalPeopleInput) {
+  const userInputTotalPeople = await userTotalPeopleInput;
   return parseInt(userInputTotalPeople, 10);
 }
 
@@ -55,6 +55,7 @@ inputCustomTip.addEventListener("keydown", (event) => {
 });
 
 const inputStepTotalPeople = document.querySelector("#inputStepTotalPeople");
+
 inputStepTotalPeople.addEventListener("keydown", (event) => {
   switch (event.code) {
     case "Enter":
@@ -67,36 +68,36 @@ inputStepTotalPeople.addEventListener("keydown", (event) => {
 /// //////////////////////////////////////////////////////////////////////////////
 /// region:      --- Logic ---
 /// //////////////////////////////////////////////////////////////////////////////
-const calculateTipAmount = (bill, tip) => (bill * tip) / 100;
+const calculateTipAmount = async (bill, tip) => (bill * tip) / 100;
 
-const getTipAmountChoices = (bill, calculatedTip, tip, tipCustom) => {
+const getTipAmountChoices = async (bill, calculatedTip, tip, tipCustom) => {
   if (tipCustom !== 0 && tipCustom !== "" && tipCustom !== null) {
-    calculatedTip = calculateTipAmount(bill, tipCustom);
+    calculatedTip = await calculateTipAmount(bill, tipCustom);
   } else {
-    calculatedTip = calculateTipAmount(bill, tip);
+    calculatedTip = await calculateTipAmount(bill, tip);
   }
   return calculatedTip;
 };
 
-const calculateTotalPerPerson = (bill, calculatedTip, totalPeople) =>
+const calculateTotalPerPerson = async (bill, calculatedTip, totalPeople) =>
   (bill + calculatedTip) / totalPeople;
 
 async function runCalculateTip() {
-  const resultBill = getInputBillAmount(bill);
-  const resultTip = getInputTipPercent(userTipChoice);
-  const resultTipCustom = getInputCustomTip(userTipCustomChoice);
-  const resultTotalPeople = getInputTotalPeople(userTotalPeopleInput);
+  const resultBill = await getInputBillAmount(bill);
+  const resultTip = await getInputTipPercent(userTipChoice);
+  const resultTipCustom = await getInputCustomTip(userTipCustomChoice);
+  const resultTotalPeople = await getInputTotalPeople(userTotalPeopleInput);
 
   let tipAmount = 0;
 
-  tipAmount = getTipAmountChoices(
+  tipAmount = await getTipAmountChoices(
     resultBill,
     tipAmount,
     resultTip,
     resultTipCustom
   );
 
-  const totalPerPerson = calculateTotalPerPerson(
+  const totalPerPerson = await calculateTotalPerPerson(
     resultBill,
     tipAmount,
     resultTotalPeople
@@ -115,8 +116,15 @@ async function runCalculateTip() {
 
 async function main() {
   const results = await runCalculateTip();
+  console.log(results);
   const { tipAmount, totalPerPerson } = results;
   console.log(tipAmount, totalPerPerson);
 }
 
-main();
+async function runMain() {
+  inputStepTotalPeople.addEventListener("keydown", async () => {
+    await main();
+  });
+}
+
+runMain();
