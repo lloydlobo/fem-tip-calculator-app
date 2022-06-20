@@ -67,7 +67,8 @@
               <div class="card-tip__amount__label__subtitle">/ person</div>
             </div>
             <div class="card-tip__amount__value">
-              <img src="./assets/images/icon-dollar.svg" />4.27
+              <img src="./assets/images/icon-dollar.svg" />
+              <span id="tipPerPerson">4.27</span>
             </div>
           </div>
           <div class="card-tip__total flex">
@@ -76,10 +77,11 @@
               <div class="card-tip__total__label__subtitle">/ person</div>
             </div>
             <div class="card-tip__total__value">
-              <img src="./assets/images/icon-dollar.svg" />32.79
+              <img src="./assets/images/icon-dollar.svg" /><span id="totalPerPerson">32.79</span>
             </div>
           </div>
-          <button class="card-tip__button" accesskey="r" label="Press r to reset" accesskey-icon="arrow_back">
+          <button id="btnReset" class="card-tip__button" accesskey="r" label="Press r to reset"
+            accesskey-icon="arrow_back">
             Reset
           </button>
         </div>
