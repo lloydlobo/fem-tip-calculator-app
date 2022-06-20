@@ -66,7 +66,7 @@ const resetResults = () => {
   btnReset.addEventListener("click", () => {
     updateTipPerPerson(0);
     updateTotalPerPerson(0);
-    let billTip = bill * tip;
+    const billTip = bill * tip;
     console.log({ billTip });
   });
 };
