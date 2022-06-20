@@ -1,11 +1,29 @@
 // cspell:ignore btns
-const inputBill = document.querySelector("#inputBill");
 // https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#handle_keyboard_events_in_a_game
+const hashMap = new Map();
+
+function getInputBillAmount(bill) {
+  const userInputTotalBill = bill;
+}
+function getInputTipPercent(userTipChoice) {
+  const userInputTipPercent = userTipChoice;
+}
+function getInputCustomTip(userTipCustomChoice) {
+  const userInputCustomTip = userTipCustomChoice;
+}
+function getInputTotalPeople(userTotalPeopleInput) {
+  const userInputTotalPeople = userTotalPeopleInput;
+}
+// calculateTip();
+// reset();
+
+const inputBill = document.querySelector("#inputBill");
 inputBill.addEventListener("keydown", (event) => {
   switch (event.code) {
     case "Enter":
     case "Tab":
-      console.log(inputBill.value);
+      getInputBillAmount(inputBill.value);
+      break;
   }
 });
 
@@ -13,13 +31,9 @@ const btnsTip = document.querySelectorAll("#btnsTip");
 
 btnsTip.forEach((btnTip) => {
   btnTip.addEventListener("click", () => {
-    console.log(btnTip.value);
+    getInputTipPercent(btnTip.value);
+    // console.log(btnTip.value);
   });
-  // btnTip.addEventListener("keydown", (event) => {
-  //   if (event.code === "Enter") {
-  //     // console.log(btnTip.value);
-  //   }
-  // });
 });
 
 const inputCustomTip = document.querySelector("#inputCustomTip");
@@ -28,12 +42,7 @@ inputCustomTip.addEventListener("keydown", (event) => {
   switch (event.code) {
     case "Enter":
     case "Tab":
-      console.log(inputCustomTip.value);
-      break;
-    case null:
-      throw new Error("file: script.js | line 27 | event.code is null");
-    default:
-      // console.log(event.code);
+      getInputCustomTip(inputCustomTip.value);
       break;
   } // end switch
 });
@@ -43,11 +52,22 @@ inputStepTotalPeople.addEventListener("keydown", (event) => {
   switch (event.code) {
     case "Enter":
     case "Tab":
-      console.log(inputStepTotalPeople.value);
-      break;
-    case null:
-      throw new Error("file: script.js | line 27 | event.code is null");
-    default:
+      getInputTotalPeople(inputStepTotalPeople.value);
       break;
   } // end switch
 });
+
+function runCalculateTip() {
+  getInputBillAmount();
+  getInputTipPercent();
+  // getInputCustomTip();
+  // getInputTotalPeople();
+  // calculateTip();
+  // reset();
+}
+
+function main() {
+  runCalculateTip();
+}
+
+main();
