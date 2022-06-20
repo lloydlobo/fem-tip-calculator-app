@@ -11,15 +11,18 @@ const totalPerPerson = document.querySelector("#totalPerPerson");
 const btnReset = document.querySelector("#btnReset");
 
 let bill = 0;
-let userTipChoice = 0;
-let userTipCustomChoice = 0;
-let userTotalPeopleInput = 0;
+let tip = 0;
 
 inputBill.addEventListener("keydown", (event) => {
   switch (event.code) {
     case "Enter":
     case "Tab":
       console.log(inputBill.value);
+      bill = inputBill.value;
+      console.log(
+        "file: script.js | line 22 | inputBill.addEventListener | bill",
+        bill
+      );
       break;
   }
 });
@@ -27,6 +30,11 @@ inputBill.addEventListener("keydown", (event) => {
 btnsTip.forEach((btnTip) => {
   btnTip.addEventListener("click", () => {
     console.log(btnTip.value);
+    tip = btnTip.value;
+    console.log(
+      "file: script.js | line 30 | btnTip.addEventListener | tip",
+      tip
+    );
   });
 });
 
@@ -58,6 +66,8 @@ const resetResults = () => {
   btnReset.addEventListener("click", () => {
     updateTipPerPerson(0);
     updateTotalPerPerson(0);
+    let billTip = bill * tip;
+    console.log({ billTip });
   });
 };
 
