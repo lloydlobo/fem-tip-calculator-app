@@ -1,78 +1,80 @@
 // cspell:ignore btns
-// https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code#handle_keyboard_events_in_a_game
-// const hashMap = new Map();
 
 const inputBill = document.querySelector("#inputBill");
 const btnsTip = document.querySelectorAll("#btnsTip");
-const tipPerPerson = document.querySelector("#tipPerPerson");
 const inputCustomTip = document.querySelector("#inputCustomTip");
 const inputStepTotalPeople = document.querySelector("#inputStepTotalPeople");
+
+const tipPerPerson = document.querySelector("#tipPerPerson");
 const totalPerPerson = document.querySelector("#totalPerPerson");
 const btnReset = document.querySelector("#btnReset");
 
 let bill = 0;
 let tip = 0;
-
-inputBill.addEventListener("keydown", (event) => {
-  switch (event.code) {
-    case "Enter":
-    case "Tab":
-      console.log(inputBill.value);
-      bill = inputBill.value;
-      console.log(
-        "file: script.js | line 22 | inputBill.addEventListener | bill",
-        bill
-      );
-      break;
-  }
-});
-
-btnsTip.forEach((btnTip) => {
-  btnTip.addEventListener("click", () => {
-    console.log(btnTip.value);
-    tip = btnTip.value;
-    console.log(
-      "file: script.js | line 30 | btnTip.addEventListener | tip",
-      tip
-    );
-  });
-});
-
-inputCustomTip.addEventListener("keydown", (event) => {
-  switch (event.code) {
-    case "Enter":
-    case "Tab":
-      console.log(inputCustomTip.value);
-      break;
-  } // end switch
-});
-
-inputStepTotalPeople.addEventListener("keydown", (event) => {
-  switch (event.code) {
-    case "Enter":
-    case "Tab":
-      console.log(inputStepTotalPeople.value);
-      break;
-  } // end switch
-});
+let people = 1;
 
 /// //////////////////////////////////////////////////////////
-const updateTipPerPerson = (tip) => (tipPerPerson.textContent = `${tip}`);
 
-const updateTotalPerPerson = (total) =>
-  (totalPerPerson.textContent = `${total}`);
-
-const resetResults = () => {
-  btnReset.addEventListener("click", () => {
-    updateTipPerPerson(0);
-    updateTotalPerPerson(0);
-    let billTip = bill * tip;
-    console.log({ billTip });
+async function eventUserBill() {
+  inputBill.addEventListener("keydown", async (event) => {
+    switch (event.code) {
+      case "Enter":
+      case "Tab":
+        console.log(inputBill.value);
+        bill = await inputBill.value;
+        console.log(
+          "file: script.js | line 22 | inputBill.addEventListener | bill",
+          bill
+        );
+        break;
+    }
   });
-};
-
-/// //////////////////////////////////////////////////////////
-function main() {
-  resetResults();
 }
-main();
+
+async function eventUserCustomTip() {
+  inputCustomTip.addEventListener("keydown", async (event) => {
+    switch (event.code) {
+      case "Enter":
+      case "Tab":
+        console.log(inputCustomTip.value);
+        tip = (await inputCustomTip.value) * 0.01;
+        break;
+    }
+  });
+}
+
+async function eventUserTip() {
+  btnsTip.forEach((btnTip) => {
+    btnTip.addEventListener("click", async () => {
+      console.log(btnTip.value);
+      tip = await btnTip.value;
+      console.log(
+        "file: script.js | line 30 | btnTip.addEventListener | tip",
+        tip
+      );
+    });
+  });
+}
+
+async function eventUserTotalPeople() {
+  inputStepTotalPeople.addEventListener("keydown", async (event) => {
+    switch (event.code) {
+      case "Enter":
+      case "Tab":
+        console.log(inputStepTotalPeople.value);
+        people = await inputStepTotalPeople.value;
+        break;
+    }
+  });
+}
+
+btnReset.addEventListener("click", () => {
+  tipPerPerson.textContent = "0";
+  totalPerPerson.textContent = "0";
+  inputBill.value = "";
+  inputCustomTip.value = "";
+  inputStepTotalPeople.value = "";
+  bill = 0;
+  tip = 0;
+  people = 1;
+});
