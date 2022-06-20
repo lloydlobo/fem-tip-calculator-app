@@ -10,10 +10,10 @@ const inputStepTotalPeople = document.querySelector("#inputStepTotalPeople");
 const totalPerPerson = document.querySelector("#totalPerPerson");
 const btnReset = document.querySelector("#btnReset");
 
-let bill = 0;
-let userTipChoice = 0;
-let userTipCustomChoice = 0;
-let userTotalPeopleInput = 0;
+const bill = 0;
+const userTipChoice = 0;
+const userTipCustomChoice = 0;
+const userTotalPeopleInput = 0;
 
 inputBill.addEventListener("keydown", (event) => {
   switch (event.code) {
